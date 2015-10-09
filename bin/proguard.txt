@@ -1,0 +1,26 @@
+# view AndroidManifest.xml #generated:88
+-keep class com.zf.csptool.ContactsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class com.zf.csptool.HeadlessSmsSendService { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.zf.csptool.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:34
+-keep class com.zf.csptool.MmsReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:93
+-keep class com.zf.csptool.PhoneActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.zf.csptool.SmsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:25
+-keep class com.zf.csptool.SmsReceiver { <init>(...); }
+
+# view res/layout/activity_contacts.xml #generated:7
+# view res/layout/activity_phone.xml #generated:7
+# view res/layout/activity_sms.xml #generated:8
+-keep class com.zf.layout.TitleLayout { <init>(...); }
+

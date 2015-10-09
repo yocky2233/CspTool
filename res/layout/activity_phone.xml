@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneActivity" >
+
+     <com.zf.layout.TitleLayout 
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></com.zf.layout.TitleLayout>
+     <RelativeLayout 
+         android:layout_below="@id/top"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingBottom="@dimen/activity_vertical_margin"
+         android:paddingLeft="@dimen/activity_horizontal_margin"
+         android:paddingRight="@dimen/activity_horizontal_margin"
+         android:paddingTop="@dimen/activity_vertical_margin"
+         >
+         <EditText 
+             android:id="@+id/phoneNumber"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:singleLine="true"
+             android:inputType="number"
+             android:hint="10086"
+         />
+         <TextView 
+             android:id="@+id/phoneNumberText"
+             android:layout_width="match_parent"
+             android:layout_height="20dp"
+             android:layout_below="@id/phoneNumber"
+             android:text="添加号码"
+             />
+         
+         <EditText 
+             android:id="@+id/addNumber"
+             android:layout_width="match_parent"
+             android:layout_height="40dp"
+             android:layout_below="@id/phoneNumberText"
+             android:singleLine="true"
+             android:inputType="number"
+             android:hint="100"
+         />
+          <TextView 
+             android:id="@+id/addNumberText"
+             android:layout_width="match_parent"
+             android:layout_height="20dp"
+             android:layout_below="@id/addNumber"
+             android:text="添加条数"
+             />
+          
+          <TextView 
+             android:id="@+id/text"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="18sp"
+             android:layout_marginTop ="10dip"
+             android:layout_below="@id/addNumberText"
+             android:text="添加在同一个号码中"
+             />
+          <ToggleButton 
+              android:id="@+id/btu"
+              android:layout_width="50dp"
+              android:layout_height="18sp"
+              android:layout_alignBottom="@+id/text"
+              android:layout_alignRight="@+id/addNumberText"
+              android:textOn=" "
+              android:textOff="  "
+              android:background="@drawable/toggle_off" />
+          
+          <TextView 
+             android:id="@+id/type"
+             android:layout_width="match_parent"
+             android:layout_height="20dp"
+             android:layout_marginTop ="10dip"
+             android:layout_below="@id/text"
+             android:text="选择类型："
+             />
+          
+          <RadioGroup
+             android:id="@+id/radiogroup"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/type"
+             >
+
+             <RadioButton
+                 android:id="@+id/received"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="已接电话"
+                  />
+             <RadioButton
+                 android:id="@+id/missed"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop ="3dip"
+                 android:text="未接电话"
+                  />
+             <RadioButton
+                 android:id="@+id/dialing"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop ="3dip"
+                 android:text="已拨电话"
+                  />
+             <RadioButton
+                 android:id="@+id/random"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop ="3dip"
+                 android:checked="true"
+                 android:text="随机类型"
+                  />
+         </RadioGroup>
+         
+          <Button 
+              android:id="@+id/generate"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/radiogroup"
+              android:layout_marginTop ="10dip" 
+              android:text="生成记录"
+              />
+         
+     </RelativeLayout>
+
+     
+
+</RelativeLayout>

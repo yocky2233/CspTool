@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CspTool</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_sms">SmsActivity</string>
+    <string name="number_hint">输入随机生成短信条数</string>
+    <string name="sms_hint">Sms</string>
+    <string name="btn_send">随机生成</string>
+    <string name="btn_cancel">退出</string>
+    <string name="ST">输入每个会话短信条数</string>
+    <string name="in">输入收件人号码</string>
+    <string name="in2">输入会话条数</string>
+    <string name="Text">输入短信内容</string>
+    <string name="btn_send1">生成</string>
+    <string name="mms">输入随机生成彩信条数</string>
+    <string name="btn_send2">生成彩信会话</string>
+    <string name="btn_send3">生成彩信会话泡</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="title_activity_phone">PhoneActivity</string>
+
+</resources>
