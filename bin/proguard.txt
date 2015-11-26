@@ -19,6 +19,9 @@
 # view AndroidManifest.xml #generated:25
 -keep class com.zf.csptool.SmsReceiver { <init>(...); }
 
+# view AndroidManifest.xml #generated:98
+-keep class com.zf.csptool.TanqiActivity { <init>(...); }
+
 # view res/layout/activity_contacts.xml #generated:7
 # view res/layout/activity_phone.xml #generated:7
 # view res/layout/activity_sms.xml #generated:8

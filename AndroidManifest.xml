@@ -43,8 +43,8 @@
 
         <activity
             android:name="com.zf.csptool.MainActivity"
-            android:label="@string/app_name" 
-            android:screenOrientation="portrait">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -87,13 +87,17 @@
 
         <activity
             android:name="com.zf.csptool.ContactsActivity"
-            android:label="@string/title_activity_contacts" 
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_contacts"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.zf.csptool.PhoneActivity"
-            android:label="@string/title_activity_phone" 
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_phone"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.zf.csptool.TanqiActivity"
+            android:label="@string/title_activity_tanqi" >
         </activity>
     </application>
 

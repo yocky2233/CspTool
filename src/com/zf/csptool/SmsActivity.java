@@ -45,12 +45,17 @@ public class SmsActivity extends Activity
 	private Button btnSend3;
 	private Button btnCancel;
 	private Button handoverBtn;
+	private Button tianqi;
 	private EditText etinput;
 	private EditText etTime;
 	private EditText etText;
 	private EditText etmms;
 	private EditText etHHS;
 	private ProgressDialog pd;
+	private String cs = null;
+	private String wd = null;
+	private String maxwd = null;
+	private String minwd = null;
 	ProgressDialog progressDialog;
 	int time;
 	boolean stop = false;
@@ -72,12 +77,21 @@ public class SmsActivity extends Activity
         btnSend2 = (Button)findViewById(R.id.btn_send2);
         btnSend3 = (Button)findViewById(R.id.btn_send3);
         handoverBtn = (Button)findViewById(R.id.Handover);
+        tianqi = (Button)findViewById(R.id.tianqi);
         TextView topName = (TextView)findViewById(R.id.topNme);
         etText.setEnabled(true);
         etinput.requestFocus();
         topName.setText("生成信息");
+        
+        tianqi.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+					Intent intent = new Intent();
+					intent.setClass(SmsActivity.this, TanqiActivity.class);
+					startActivityForResult(intent,0);
+			}
+        });
         handoverBtn.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -208,6 +222,19 @@ public class SmsActivity extends Activity
 			}
         });
     }
+    
+    @Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    	try {
+    		cs= data.getStringExtra("str1");
+        	wd = data.getStringExtra("str2");
+        	maxwd = data.getStringExtra("str3");
+        	minwd = data.getStringExtra("str4");
+    	}catch(Exception e) {
+    		e.printStackTrace();
+    	}
+		super.onActivityResult(requestCode, resultCode, data);
+	}
     
     public void Progress(int time) {
     	progressDialog = new ProgressDialog(SmsActivity.this);
@@ -435,6 +462,12 @@ public class SmsActivity extends Activity
         values.put("body", smsContent);
         values.put("type", type);  
         values.put("read", "1");
+        if(cs!=null&&wd!=null&&maxwd!=null&&minwd!=null){
+        	values.put("weather_info", cs+"-"+wd+"-晴-"+maxwd+"-"+minwd+"-西风-0-62-0-晴-2015111610");
+        	System.out.println(cs+"-"+wd+"-晴-"+maxwd+"-"+minwd+"-西风-0-62-0-晴-2015111610");
+        }else {
+        	System.out.println("没天气信息");
+        }
         getContentResolver().insert(Uri.parse("content://sms/sent"), values);//inbox
     }
     

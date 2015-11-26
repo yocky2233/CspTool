@@ -19,5 +19,6 @@
     <string name="btn_send3">生成彩信会话泡</string>
     <string name="title_activity_contacts">ContactsActivity</string>
     <string name="title_activity_phone">PhoneActivity</string>
+    <string name="title_activity_tanqi">TanqiActivity</string>
 
 </resources>

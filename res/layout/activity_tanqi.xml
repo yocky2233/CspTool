@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TanqiActivity" >
+
+    <TextView
+        android:id="@+id/cs"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="天气城市:" />
+    
+    <EditText 
+        android:id="@+id/csET"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/cs"
+        android:layout_alignBottom="@id/cs" 
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="深圳"/>
+    <TextView
+        android:id="@+id/nowWD"
+        android:textSize="30sp"
+        android:layout_below="@id/cs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="现在温度:" />
+    <EditText 
+        android:id="@+id/nowWDET"
+        android:layout_toRightOf="@id/nowWD"
+        android:layout_alignBottom="@id/nowWD" 
+        android:layout_width="120dp"
+        android:textSize="20sp"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+         />
+    <TextView
+        android:id="@+id/maxWD"
+        android:textSize="30sp"
+        android:layout_below="@id/nowWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最高温度:" />
+    <EditText 
+        android:id="@+id/maxWDET"
+        android:layout_toRightOf="@id/maxWD"
+        android:layout_alignBottom="@id/maxWD" 
+        android:layout_width="120dp"
+        android:textSize="20sp"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+         />
+    <TextView
+        android:id="@+id/minWD"
+        android:textSize="30sp"
+        android:layout_below="@id/maxWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最低温度:" />
+    <EditText 
+        android:id="@+id/maxWDET"
+        android:layout_toRightOf="@id/minWD"
+        android:layout_alignBottom="@id/minWD" 
+        android:layout_width="120dp"
+        android:textSize="20sp"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+         />
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="确定" />
+        
+</RelativeLayout>
