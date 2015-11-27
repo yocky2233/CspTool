@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:text="最低温度:" />
     <EditText 
-        android:id="@+id/maxWDET"
+        android:id="@+id/minWDET"
         android:layout_toRightOf="@id/minWD"
         android:layout_alignBottom="@id/minWD" 
         android:layout_width="120dp"

@@ -24,7 +24,7 @@ public class TanqiActivity extends Activity {
 		et1 = (EditText)findViewById(R.id.csET);
 		et2 = (EditText)findViewById(R.id.nowWDET);
 		et3 = (EditText)findViewById(R.id.maxWDET);
-		et4 = (EditText)findViewById(R.id.maxWDET);
+		et4 = (EditText)findViewById(R.id.minWDET);
 		bt = (Button)findViewById(R.id.bt);
 		
 		bt.setOnClickListener(new OnClickListener() {
