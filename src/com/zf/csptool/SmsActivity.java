@@ -463,6 +463,7 @@ public class SmsActivity extends Activity
         values.put("type", type);  
         values.put("read", "1");
         if(cs!=null&&wd!=null&&maxwd!=null&&minwd!=null){
+//        	values.put("weather_info", "深圳-21-大雨-暴雨-18-21-东风-0-93--1-null-2016010711");
         	values.put("weather_info", cs+"-"+wd+"-晴-"+maxwd+"-"+minwd+"-西风-0-62-0-晴-2015111610");
         	System.out.println(cs+"-"+wd+"-晴-"+maxwd+"-"+minwd+"-西风-0-62-0-晴-2015111610");
         }else {
