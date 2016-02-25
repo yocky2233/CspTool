@@ -426,25 +426,37 @@ public class SmsActivity extends Activity
     	if(version>=19){
     		final String myPackageName = getPackageName(); 
         	String defaultSmsApp = Telephony.Sms.getDefaultSmsPackage(this); 
-        	if (!defaultSmsApp.equals(myPackageName)) {
+        	System.out.println("包名："+myPackageName);
+//        	Log.d("aaaa","包名："+myPackageName);
+//        	Log.d("aaaa","默认包名："+defaultSmsApp);
+        	if (defaultSmsApp==null || !defaultSmsApp.equals(myPackageName)) {
         		handoverBtn.setVisibility(View.GONE);
-        		AlertDialog alertDialog = new AlertDialog.Builder(this).setTitle("更改默认SMS").setMessage("android4.4以上需设置为默认SMS才能正常使用")
-        		.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-        		public void onClick(DialogInterface dialog, int which) {
-        		Intent intent =  
-                        new Intent(Telephony.Sms.Intents.ACTION_CHANGE_DEFAULT);
-        		intent.putExtra(Telephony.Sms.Intents.EXTRA_PACKAGE_NAME,   
-                        myPackageName);  
-        		startActivity(intent); 
-        		}})
-        		.setNegativeButton("取消",new DialogInterface.OnClickListener() {
-            	public void onClick(DialogInterface dialog, int which) {
-                finish();
-                }})
-                .create();
-        		alertDialog.setCancelable(false);
-        		alertDialog.show();
-        		//.show();
+        		if(defaultSmsApp==null) {
+        			Intent intent =  
+                            new Intent(Telephony.Sms.Intents.ACTION_CHANGE_DEFAULT);
+            		intent.putExtra(Telephony.Sms.Intents.EXTRA_PACKAGE_NAME,   
+                            myPackageName);  
+            		startActivity(intent);
+            		handoverBtn.setVisibility(View.VISIBLE);
+        		}else {
+        			AlertDialog alertDialog = new AlertDialog.Builder(this).setTitle("更改默认SMS").setMessage("android4.4以上需设置为默认SMS才能正常使用")
+        	        		.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+        	        		public void onClick(DialogInterface dialog, int which) {
+        	        		Intent intent =  
+        	                        new Intent(Telephony.Sms.Intents.ACTION_CHANGE_DEFAULT);
+        	        		intent.putExtra(Telephony.Sms.Intents.EXTRA_PACKAGE_NAME,   
+        	                        myPackageName);  
+        	        		startActivity(intent); 
+        	        		}})
+        	        		.setNegativeButton("取消",new DialogInterface.OnClickListener() {
+        	            	public void onClick(DialogInterface dialog, int which) {
+        	                finish();
+        	                }})
+        	                .create();
+        	        		alertDialog.setCancelable(false);
+        	        		alertDialog.show();
+        	        		//.show();
+        		}
         	}else {
         		handoverBtn.setVisibility(View.VISIBLE);
         	}
