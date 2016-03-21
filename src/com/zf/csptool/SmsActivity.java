@@ -574,19 +574,19 @@ public class SmsActivity extends Activity
         ContentValues cv_text_1 = createPartRecord(0, "text/plain", "text_1.txt", "<text_1>", "text_1.txt", null, null);
         cv_text_1.put(Part.MSG_ID, msgId);
         cv_text_1.remove(Part.TEXT);
-        cv_text_1.put(Part.TEXT, "slide 1 text");
+        cv_text_1.put(Part.TEXT, "slide 1 text 13682730358 www.baidu.com 123456789@QQ.com");
         cv_text_1.put(Part.CHARSET, "106");
 
         ContentValues cv_text_2 = createPartRecord(0, "text/plain", "text_2.txt", "<text_2>", "text_2.txt", null, null);
         cv_text_2.put(Part.MSG_ID, msgId);
         cv_text_2.remove(Part.TEXT);
-        cv_text_2.put(Part.TEXT, "slide 2 audio");
+        cv_text_2.put(Part.TEXT, "slide 2 audio www.baidu.com");
         cv_text_2.put(Part.CHARSET, "106");
         
         ContentValues cv_text_3 = createPartRecord(0, "text/plain", "text_3.txt", "<text_3>", "text_3.txt", null, null);
         cv_text_3.put(Part.MSG_ID, msgId);
         cv_text_3.remove(Part.TEXT);
-        cv_text_3.put(Part.TEXT, "slide 3 video");
+        cv_text_3.put(Part.TEXT, "slide 3 video 123456789@QQ.com");
         cv_text_3.put(Part.CHARSET, "106");
 
         // insert parts
